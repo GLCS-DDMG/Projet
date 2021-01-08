@@ -75,17 +75,17 @@ CMAKE_BINARY_DIR = /data
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -131,28 +131,28 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /data/CMakeFiles /data//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /data && $(CMAKE_COMMAND) -E cmake_progress_start /data/CMakeFiles /data/NewConfig//CMakeFiles/progress.marks
+	cd /data && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /data/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /data && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig/clean
 .PHONY : clean
 
 # The main clean target
@@ -162,110 +162,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /data && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /data && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /data && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named simpleheat
+# Convenience name for target.
+NewConfig/CMakeFiles/NewConfig.dir/rule:
+	cd /data && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig/CMakeFiles/NewConfig.dir/rule
+.PHONY : NewConfig/CMakeFiles/NewConfig.dir/rule
 
-# Build rule for target.
-simpleheat: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simpleheat
-.PHONY : simpleheat
+# Convenience name for target.
+NewConfig: NewConfig/CMakeFiles/NewConfig.dir/rule
 
-# fast build rule for target.
-simpleheat/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simpleheat.dir/build.make CMakeFiles/simpleheat.dir/build
-.PHONY : simpleheat/fast
-
-#=============================================================================
-# Target rules for targets named baselib
-
-# Build rule for target.
-baselib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 baselib
-.PHONY : baselib
-
-# fast build rule for target.
-baselib/fast:
-	$(MAKE) $(MAKESILENT) -f baselib/CMakeFiles/baselib.dir/build.make baselib/CMakeFiles/baselib.dir/build
-.PHONY : baselib/fast
-
-#=============================================================================
-# Target rules for targets named heatlib
-
-# Build rule for target.
-heatlib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 heatlib
-.PHONY : heatlib
-
-# fast build rule for target.
-heatlib/fast:
-	$(MAKE) $(MAKESILENT) -f heatlib/CMakeFiles/heatlib.dir/build.make heatlib/CMakeFiles/heatlib.dir/build
-.PHONY : heatlib/fast
-
-#=============================================================================
-# Target rules for targets named simpleui
-
-# Build rule for target.
-simpleui: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simpleui
-.PHONY : simpleui
-
-# fast build rule for target.
-simpleui/fast:
-	$(MAKE) $(MAKESILENT) -f simpleui/CMakeFiles/simpleui.dir/build.make simpleui/CMakeFiles/simpleui.dir/build
-.PHONY : simpleui/fast
-
-#=============================================================================
-# Target rules for targets named NewConfig
-
-# Build rule for target.
-NewConfig: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NewConfig
 .PHONY : NewConfig
 
 # fast build rule for target.
 NewConfig/fast:
-	$(MAKE) $(MAKESILENT) -f NewConfig/CMakeFiles/NewConfig.dir/build.make NewConfig/CMakeFiles/NewConfig.dir/build
+	cd /data && $(MAKE) $(MAKESILENT) -f NewConfig/CMakeFiles/NewConfig.dir/build.make NewConfig/CMakeFiles/NewConfig.dir/build
 .PHONY : NewConfig/fast
 
-simpleheat.o: simpleheat.cpp.o
+src/newconfig.o: src/newconfig.cpp.o
 
-.PHONY : simpleheat.o
+.PHONY : src/newconfig.o
 
 # target to build an object file
-simpleheat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simpleheat.dir/build.make CMakeFiles/simpleheat.dir/simpleheat.cpp.o
-.PHONY : simpleheat.cpp.o
+src/newconfig.cpp.o:
+	cd /data && $(MAKE) $(MAKESILENT) -f NewConfig/CMakeFiles/NewConfig.dir/build.make NewConfig/CMakeFiles/NewConfig.dir/src/newconfig.cpp.o
+.PHONY : src/newconfig.cpp.o
 
-simpleheat.i: simpleheat.cpp.i
+src/newconfig.i: src/newconfig.cpp.i
 
-.PHONY : simpleheat.i
+.PHONY : src/newconfig.i
 
 # target to preprocess a source file
-simpleheat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simpleheat.dir/build.make CMakeFiles/simpleheat.dir/simpleheat.cpp.i
-.PHONY : simpleheat.cpp.i
+src/newconfig.cpp.i:
+	cd /data && $(MAKE) $(MAKESILENT) -f NewConfig/CMakeFiles/NewConfig.dir/build.make NewConfig/CMakeFiles/NewConfig.dir/src/newconfig.cpp.i
+.PHONY : src/newconfig.cpp.i
 
-simpleheat.s: simpleheat.cpp.s
+src/newconfig.s: src/newconfig.cpp.s
 
-.PHONY : simpleheat.s
+.PHONY : src/newconfig.s
 
 # target to generate assembly for a file
-simpleheat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/simpleheat.dir/build.make CMakeFiles/simpleheat.dir/simpleheat.cpp.s
-.PHONY : simpleheat.cpp.s
+src/newconfig.cpp.s:
+	cd /data && $(MAKE) $(MAKESILENT) -f NewConfig/CMakeFiles/NewConfig.dir/build.make NewConfig/CMakeFiles/NewConfig.dir/src/newconfig.cpp.s
+.PHONY : src/newconfig.cpp.s
 
 # Help Target
 help:
@@ -280,13 +230,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... NewConfig"
-	@echo "... baselib"
-	@echo "... heatlib"
-	@echo "... simpleheat"
-	@echo "... simpleui"
-	@echo "... simpleheat.o"
-	@echo "... simpleheat.i"
-	@echo "... simpleheat.s"
+	@echo "... src/newconfig.o"
+	@echo "... src/newconfig.i"
+	@echo "... src/newconfig.s"
 .PHONY : help
 
 
@@ -298,6 +244,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /data && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

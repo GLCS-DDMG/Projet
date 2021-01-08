@@ -32,3 +32,10 @@
 /data/simpleui/CMakeFiles/rebuild_cache.dir
 /data/simpleui/CMakeFiles/edit_cache.dir
 /data/simpleui/CMakeFiles/simpleui.dir
+/data/NewConfig/CMakeFiles/install/local.dir
+/data/NewConfig/CMakeFiles/install.dir
+/data/NewConfig/CMakeFiles/list_install_components.dir
+/data/NewConfig/CMakeFiles/rebuild_cache.dir
+/data/NewConfig/CMakeFiles/edit_cache.dir
+/data/NewConfig/CMakeFiles/install/strip.dir
+/data/NewConfig/CMakeFiles/NewConfig.dir

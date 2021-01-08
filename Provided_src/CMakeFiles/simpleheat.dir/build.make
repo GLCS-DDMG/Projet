@@ -101,6 +101,7 @@ simpleheat: CMakeFiles/simpleheat.dir/build.make
 simpleheat: baselib/libbaselib.a
 simpleheat: heatlib/libheatlib.a
 simpleheat: simpleui/libsimpleui.a
+simpleheat: NewConfig/libNewConfig.a
 simpleheat: baselib/libbaselib.a
 simpleheat: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
 simpleheat: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so

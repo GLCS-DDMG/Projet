@@ -1,6 +1,6 @@
 #include <mpi.h>
 
-#include "commandlineconfig.hpp"
+#include "newconfig.hpp"
 #include "finitediffheatsolver.hpp"
 #include "fixedconditions.hpp"
 #include "simulation.hpp"

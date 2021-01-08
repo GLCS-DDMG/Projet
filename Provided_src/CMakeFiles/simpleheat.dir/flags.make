@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/data/baselib/include -I/data/vendor/mdspan/include -I/data/heatlib/include -I/data/simpleui/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include
+CXX_INCLUDES = -I/data/baselib/include -I/data/vendor/mdspan/include -I/data/heatlib/include -I/data/simpleui/include -I/data/NewConfig/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include
 
 CXX_FLAGS = -pthread
 

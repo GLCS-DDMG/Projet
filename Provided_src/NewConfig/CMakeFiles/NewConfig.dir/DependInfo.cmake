@@ -4,17 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/data/simpleheat.cpp" "/data/CMakeFiles/simpleheat.dir/simpleheat.cpp.o"
+  "/data/NewConfig/src/newconfig.cpp" "/data/NewConfig/CMakeFiles/NewConfig.dir/src/newconfig.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "NewConfig/include"
   "baselib/include"
   "vendor/mdspan/include"
-  "heatlib/include"
-  "simpleui/include"
-  "NewConfig/include"
   "/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"
   "/usr/lib/x86_64-linux-gnu/openmpi/include"
   )
@@ -22,9 +20,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/data/baselib/CMakeFiles/baselib.dir/DependInfo.cmake"
-  "/data/heatlib/CMakeFiles/heatlib.dir/DependInfo.cmake"
-  "/data/simpleui/CMakeFiles/simpleui.dir/DependInfo.cmake"
-  "/data/NewConfig/CMakeFiles/NewConfig.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

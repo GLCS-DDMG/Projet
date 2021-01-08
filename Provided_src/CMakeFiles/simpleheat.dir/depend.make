@@ -35,6 +35,7 @@ CMakeFiles/simpleheat.dir/simpleheat.cpp.o: /usr/lib/x86_64-linux-gnu/openmpi/in
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/topology_inln.h
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/win.h
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/ompi/mpi/cxx/win_inln.h
+CMakeFiles/simpleheat.dir/simpleheat.cpp.o: NewConfig/include/newconfig.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: baselib/include/cartesiandistribution2d.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: baselib/include/configuration.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: baselib/include/coord2d.hpp
@@ -45,7 +46,6 @@ CMakeFiles/simpleheat.dir/simpleheat.cpp.o: baselib/include/simulationobserver.h
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: baselib/include/timestep.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: heatlib/include/finitediffheatsolver.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: heatlib/include/fixedconditions.hpp
-CMakeFiles/simpleheat.dir/simpleheat.cpp.o: simpleui/include/commandlineconfig.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: simpleui/include/screenprinter.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: vendor/mdspan/include/experimental/__p0009_bits/accessor_basic.hpp
 CMakeFiles/simpleheat.dir/simpleheat.cpp.o: vendor/mdspan/include/experimental/__p0009_bits/all_type.hpp
