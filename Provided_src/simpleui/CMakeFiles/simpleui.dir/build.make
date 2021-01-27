@@ -76,22 +76,9 @@ include simpleui/CMakeFiles/simpleui.dir/progress.make
 # Include the compile flags for this target's objects.
 include simpleui/CMakeFiles/simpleui.dir/flags.make
 
-simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o: simpleui/CMakeFiles/simpleui.dir/flags.make
-simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o: simpleui/src/commandlineconfig.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o"
-	cd /data/simpleui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o -c /data/simpleui/src/commandlineconfig.cpp
-
-simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.i"
-	cd /data/simpleui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data/simpleui/src/commandlineconfig.cpp > CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.i
-
-simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.s"
-	cd /data/simpleui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data/simpleui/src/commandlineconfig.cpp -o CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.s
-
 simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.o: simpleui/CMakeFiles/simpleui.dir/flags.make
 simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.o: simpleui/src/screenprinter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/data/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.o"
 	cd /data/simpleui && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simpleui.dir/src/screenprinter.cpp.o -c /data/simpleui/src/screenprinter.cpp
 
 simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.i: cmake_force
@@ -104,17 +91,15 @@ simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.s: cmake_force
 
 # Object files for target simpleui
 simpleui_OBJECTS = \
-"CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o" \
 "CMakeFiles/simpleui.dir/src/screenprinter.cpp.o"
 
 # External object files for target simpleui
 simpleui_EXTERNAL_OBJECTS =
 
-simpleui/libsimpleui.a: simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o
 simpleui/libsimpleui.a: simpleui/CMakeFiles/simpleui.dir/src/screenprinter.cpp.o
 simpleui/libsimpleui.a: simpleui/CMakeFiles/simpleui.dir/build.make
 simpleui/libsimpleui.a: simpleui/CMakeFiles/simpleui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libsimpleui.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/data/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libsimpleui.a"
 	cd /data/simpleui && $(CMAKE_COMMAND) -P CMakeFiles/simpleui.dir/cmake_clean_target.cmake
 	cd /data/simpleui && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simpleui.dir/link.txt --verbose=$(VERBOSE)
 

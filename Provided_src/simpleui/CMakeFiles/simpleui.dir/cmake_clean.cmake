@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o"
   "CMakeFiles/simpleui.dir/src/screenprinter.cpp.o"
   "libsimpleui.a"
   "libsimpleui.pdb"

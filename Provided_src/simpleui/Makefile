@@ -190,33 +190,6 @@ simpleui/fast:
 	cd /data && $(MAKE) $(MAKESILENT) -f simpleui/CMakeFiles/simpleui.dir/build.make simpleui/CMakeFiles/simpleui.dir/build
 .PHONY : simpleui/fast
 
-src/commandlineconfig.o: src/commandlineconfig.cpp.o
-
-.PHONY : src/commandlineconfig.o
-
-# target to build an object file
-src/commandlineconfig.cpp.o:
-	cd /data && $(MAKE) $(MAKESILENT) -f simpleui/CMakeFiles/simpleui.dir/build.make simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.o
-.PHONY : src/commandlineconfig.cpp.o
-
-src/commandlineconfig.i: src/commandlineconfig.cpp.i
-
-.PHONY : src/commandlineconfig.i
-
-# target to preprocess a source file
-src/commandlineconfig.cpp.i:
-	cd /data && $(MAKE) $(MAKESILENT) -f simpleui/CMakeFiles/simpleui.dir/build.make simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.i
-.PHONY : src/commandlineconfig.cpp.i
-
-src/commandlineconfig.s: src/commandlineconfig.cpp.s
-
-.PHONY : src/commandlineconfig.s
-
-# target to generate assembly for a file
-src/commandlineconfig.cpp.s:
-	cd /data && $(MAKE) $(MAKESILENT) -f simpleui/CMakeFiles/simpleui.dir/build.make simpleui/CMakeFiles/simpleui.dir/src/commandlineconfig.cpp.s
-.PHONY : src/commandlineconfig.cpp.s
-
 src/screenprinter.o: src/screenprinter.cpp.o
 
 .PHONY : src/screenprinter.o
@@ -257,9 +230,6 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... simpleui"
-	@echo "... src/commandlineconfig.o"
-	@echo "... src/commandlineconfig.i"
-	@echo "... src/commandlineconfig.s"
 	@echo "... src/screenprinter.o"
 	@echo "... src/screenprinter.i"
 	@echo "... src/screenprinter.s"
