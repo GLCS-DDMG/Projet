@@ -1,7 +1,19 @@
 #pragma once
 
 // library headers
+#include <iostream>
+#include <boost/program_options.hpp>
 #include <configuration.hpp>
+#ifndef DEFAULT_VALUES
+#define DEFAULT_NB_ITER 10
+#define DEFAULT_HEIGHT  4
+#define DEFAULT_WIDTH   8 
+#define DEFAULT_PR_HEIGHT 1
+#define DEFAULT_PR_WIDTH 1
+#define DEFAULT_DLT_T 0.125
+#define DEFAULT_DLT_Y 1
+#define DEFAULT_DLT_X 1
+#endif
 
 class CommandLineConfig:
 		public Configuration
