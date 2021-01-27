@@ -141,5 +141,4 @@ CommandLineConfig::CommandLineConfig( const int argc, const char* const argv[] )
 
 	std::cout << "Configuring...\n";
 
-	exit(0);
 }
