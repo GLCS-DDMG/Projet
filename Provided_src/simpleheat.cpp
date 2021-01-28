@@ -1,10 +1,11 @@
 #include <mpi.h>
 
 #include "newconfig.hpp"
+#include "hdf5write.hpp"
 #include "finitediffheatsolver.hpp"
 #include "fixedconditions.hpp"
 #include "simulation.hpp"
-#include "screenprinter.hpp"
+//#include "screenprinter.hpp"
 
 int main( int argc, char* argv[] )
 {
@@ -20,8 +21,8 @@ int main( int argc, char* argv[] )
 	// construct the simulation runner
 	Simulation simulation( MPI_COMM_WORLD, config, heat_solver, init );
 	// Add a printer to screen to observe the simulation
-	ScreenPrinter printer;
-	simulation.observe( printer );
+	HDF5write writer;
+	simulation.observe( writer );
 
 	// run the simulation
 	simulation.run();
