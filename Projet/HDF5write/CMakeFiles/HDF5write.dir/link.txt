@@ -1,0 +1,2 @@
+/usr/bin/ar qc libHDF5write.a CMakeFiles/HDF5write.dir/src/hdf5write.cpp.o
+/usr/bin/ranlib libHDF5write.a
