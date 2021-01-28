@@ -6,6 +6,7 @@ set(HDF5_PREFER_PARALLEL TRUE)
 find_package(HDF5 REQUIRED COMPONENTS C HL)
 find_package(MPI REQUIRED COMPONENTS CXX)
 
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/ResultHDF5)
 add_subdirectory("vendor/mdspan/" "mdspan" EXCLUDE_FROM_ALL)
 
 add_subdirectory(baselib)
