@@ -7,12 +7,6 @@
 #IncludeRegexTransform: 
 
 /data/NewConfig/src/newconfig.cpp
-cstdlib
--
-iostream
--
-string
--
 newconfig.hpp
 /data/NewConfig/src/newconfig.hpp
 
@@ -245,6 +239,10 @@ boost/program_options.hpp
 -
 configuration.hpp
 -
+string
+-
+cstdlib
+-
 
 baselib/include/cartesiandistribution2d.hpp
 mpi.h
@@ -253,6 +251,8 @@ coord2d.hpp
 baselib/include/coord2d.hpp
 
 baselib/include/configuration.hpp
+string
+-
 distributed2dfield.hpp
 baselib/include/distributed2dfield.hpp
 
