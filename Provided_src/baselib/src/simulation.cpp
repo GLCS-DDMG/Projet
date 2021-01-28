@@ -17,13 +17,24 @@ void Simulation::run() const
 	// allocate data for the next iteration
 	Distributed2DField next( m_comm, m_config.dist_extents(), m_config.global_shape(), m_time_step.required_ghosts(), m_config.delta_space() );
 
+	// define iteration index for result file writing
+	int iteration_index = 1; 
+
 	// initialize data at t=0
 	m_init.initial_condition( current );
 	m_init.initial_condition( next );
 
-	for ( auto&& observer : m_observers ) {
+	// Write file if good iteration
+	if (m_config.get_write_step() == iteration_index)
+	{
+		iteration_index == 1;
+		for ( auto&& observer : m_observers ) {
 		observer->simulation_updated( current );
+		}
 	}
+	else
+		iteration_index++;
+	
 
 	// the main (time) iteration
 	for ( int ii = 0; ii < m_config.nb_iter(); ++ii ) {
@@ -31,9 +42,16 @@ void Simulation::run() const
 		// compute the temperature at the next iteration
 		m_time_step.iter( current, next );
 
-		for ( auto&& observer : m_observers ) {
+		// Write file if good iteration
+		if (m_config.get_write_step() == iteration_index)
+		{
+			iteration_index == 1;
+			for ( auto&& observer : m_observers ) {
 			observer->simulation_updated( next );
+			}
 		}
+		else
+			iteration_index++;
 
 		// swap the current and next buffers
 		current.swap( next );
